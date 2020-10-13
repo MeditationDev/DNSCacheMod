@@ -45,7 +45,7 @@ public class DNSModifyCommand extends CommandBase {
                     StringBuilder proJsonStr = new StringBuilder("[");
                     DNSData[] dnsData = new Gson().fromJson(FileUtils.readFile("./config/DNSCache.json"), DNSData[].class);
                     for (DNSData data : dnsData) {
-                        proJsonStr.append("\n\t").append(data.toJson());
+                        proJsonStr.append("\n\t").append(data.toJson()).append(",");
                     }
                     proJsonStr.append("\n\t").append(new DNSData(args[1],args[2]).toJson());
                     proJsonStr.append("\n]");
@@ -66,7 +66,7 @@ public class DNSModifyCommand extends CommandBase {
                         if (data.from.equals(args[1])) {
                             canFind = true;
                         }else{
-                            proJsonStr.append("\n\t").append(data.toJson());
+                            proJsonStr.append("\n\t").append(data.toJson()).append(",");
                         }
                     }
                     proJsonStr.append("\n]");
@@ -80,8 +80,8 @@ public class DNSModifyCommand extends CommandBase {
                     break;
                 }
                 case "list": {
-                    sender.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN+"LIST OF DNSCACHES"));
                     DNSData[] dnsData = new Gson().fromJson(FileUtils.readFile("./config/DNSCache.json"), DNSData[].class);
+                    sender.addChatMessage(new ChatComponentText(EnumChatFormatting.GREEN+"LIST OF DNSCACHES("+dnsData.length+")"));
                     for (DNSData data : dnsData) {
                         String fromIp = java.net.InetAddress.getByName(data.from).getHostAddress();
                         sender.addChatMessage(new ChatComponentText(EnumChatFormatting.WHITE + "FROM:" + data.from + " FROMIP:" + fromIp + " TARGET:" + data.target));

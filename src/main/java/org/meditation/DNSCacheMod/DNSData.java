@@ -8,6 +8,6 @@ public class DNSData {
         this.target=target;
     }
     public String toJson(){
-        return "{\"from\":"+this.from+",\"target\":"+this.target+"}";
+        return "{\"from\":\""+this.from+"\",\"target\":\""+this.target+"\"}";
     }
 }

@@ -1,12 +1,13 @@
 # DNSCacheMod
 Dynamic modify your Minecraft DNSCache(likes host file)!  
+Support all versions of Minecraft theoretically  
 
 ## Commands
 Command is */dnscachemod*  
 Usages:  
 */dnscachemod add from target* ADD A DOMAIN FOR DNSCACHE  
-*/dnscachemod remove from* REMOVE A DOMAIN FOR DNSCACHE  
-*/dnscachemod list?7 LIST* DOMAINS USING DNSCACHE  
+*/dnscachemod remove* from REMOVE A DOMAIN FOR DNSCACHE  
+*/dnscachemod list* LIST DOMAINS USING DNSCACHE  
 */dnscachemod reload* RELOAD DNSCACHES  
 
 ## Data
