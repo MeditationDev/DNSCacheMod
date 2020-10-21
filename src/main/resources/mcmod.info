@@ -3,7 +3,7 @@
   "modid": "dnscachemod",
   "name": "DNSCacheMod",
   "description": "A mod modify hosts data without change Hosts file!",
-  "version": "1.0",
+  "version": "1.1",
   "mcversion": "*",
   "url": "https://github.com/MeditationDev/DNSCacheMod",
   "updateUrl": "",
